@@ -9,6 +9,7 @@ For more info, see [Poster](<docs/report/Integrating a new model into the Unitra
 - Valentin Perret
 
 
+<img src="images/poster.png" width="1140" height="650">
 
 
 
