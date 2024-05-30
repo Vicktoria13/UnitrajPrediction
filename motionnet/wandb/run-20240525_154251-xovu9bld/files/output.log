@@ -1,0 +1,70 @@
+
+Sanity Checking DataLoader 0:   0%|                                                                                                                                                                   | 0/2 [00:00<?, ?it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:28: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn("The verbose parameter is deprecated. Please use get_last_lr() "
+  | Name                | Type      | Params
+--------------------------------------------------
+0 | stacked_transformer | STF       | 2.6 M
+1 | subgraph            | LaneNet   | 2.5 K
+2 | criterion           | Criterion | 0
+--------------------------------------------------
+2.6 M     Trainable params
+0         Non-trainable params
+2.6 M     Total params
+10.460    Total estimated model params size (MB)
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 19 worker processes in total. Our suggested max number of worker in current system is 16, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/utilities/data.py:77: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 32. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+Error executing job with overrides: ['method=mmTransformer']
+Traceback (most recent call last):
+  File "/home/sdi-2023-01/unitraj_2024_ferrari_du_19/motionnet/train2.py", line 733, in train
+    trainer.fit(model=model, train_dataloaders=train_loader, val_dataloaders=val_loader,ckpt_path=cfg.ckpt_path)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 544, in fit
+    call._call_and_handle_interrupt(
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 43, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 580, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 987, in _run
+    results = self._run_stage()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1031, in _run_stage
+    self._run_sanity_check()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1060, in _run_sanity_check
+    val_loop.run()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/loops/utilities.py", line 182, in _decorator
+    return loop_run(self, *args, **kwargs)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 135, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 396, in _evaluation_step
+    output = call._call_strategy_hook(trainer, hook_name, *step_args)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 309, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/strategies/strategy.py", line 411, in validation_step
+    return self._forward_redirection(self.model, self.lightning_module, "validation_step", *args, **kwargs)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/strategies/strategy.py", line 642, in __call__
+    wrapper_output = wrapper_module(*args, **kwargs)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1593, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1411, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/strategies/strategy.py", line 635, in wrapped_forward
+    out = method(*_args, **_kwargs)
+  File "/home/sdi-2023-01/unitraj_2024_ferrari_du_19/motionnet/models/base_model/base_model.py", line 63, in validation_step
+    prediction, loss = self.forward(batch, batch_idx)
+  File "/home/sdi-2023-01/unitraj_2024_ferrari_du_19/motionnet/models/mmTransformer/mmTransformer.py", line 273, in forward
+    loss = self.compute_loss(prediction, inputs['center_gt_trajs'], inputs['center_gt_final_valid_idx'], inputs['trajectory_type'], inputs['center_gt_trajs_mask'])
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1709, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'mmTrans' object has no attribute 'compute_loss'
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

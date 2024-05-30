@@ -1,0 +1,21 @@
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:28: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn("The verbose parameter is deprecated. Please use get_last_lr() "
+  | Name                | Type      | Params
+--------------------------------------------------
+0 | stacked_transformer | STF       | 2.6 M
+1 | subgraph            | LaneNet   | 2.5 K
+2 | criterion           | Criterion | 0
+--------------------------------------------------
+2.6 M     Trainable params
+0         Non-trainable params
+2.6 M     Total params
+10.460    Total estimated model params size (MB)
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 19 worker processes in total. Our suggested max number of worker in current system is 16, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Sanity Checking DataLoader 0:   0%|                                                                                                                                                                   | 0/2 [00:00<?, ?it/s]
+Sanity Checking DataLoader 0:   0%|                                                                                                                                                                   | 0/2 [00:00<?, ?it/s]pred_traj torch.Size([32, 6, 60, 2])
+ground_truth torch.Size([32, 60, 4])
+gt_traj torch.Size([32, 60, 2])
+FDE torch.Size([32, 6])
+MIN FDE INDEX torch.Size([32])

@@ -1,0 +1,39 @@
+
+Sanity Checking DataLoader 0:   0%|                                                                                                                   | 0/2 [00:00<?, ?it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:28: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn("The verbose parameter is deprecated. Please use get_last_lr() "
+  | Name                | Type      | Params
+--------------------------------------------------
+0 | stacked_transformer | STF       | 2.6 M
+1 | subgraph            | LaneNet   | 2.5 K
+2 | criterion           | Criterion | 0
+--------------------------------------------------
+2.6 M     Trainable params
+0         Non-trainable params
+2.6 M     Total params
+10.460    Total estimated model params size (MB)
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 19 worker processes in total. Our suggested max number of worker in current system is 16, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+
+Epoch 0:   0%|                                                                                                                                                                                     | 0/1558 [00:00<?, ?it/s]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/utilities/data.py:77: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 32. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+Epoch 0:   0%|                                                                                                                                                                 | 1/1558 [00:00<21:17,  1.22it/s, v_num=ttqc]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:   2%|███                                                                                                                                                             | 30/1558 [00:31<26:22,  0.97it/s, v_num=ttqc]
+
+Epoch 0:   2%|███▏                                                                                                                                                            | 31/1558 [00:32<26:47,  0.95it/s, v_num=ttqc]

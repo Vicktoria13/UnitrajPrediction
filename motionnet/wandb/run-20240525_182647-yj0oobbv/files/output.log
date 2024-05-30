@@ -1,0 +1,32 @@
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:28: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn("The verbose parameter is deprecated. Please use get_last_lr() "
+  | Name                | Type      | Params
+--------------------------------------------------
+0 | stacked_transformer | STF       | 2.6 M
+1 | subgraph            | LaneNet   | 2.5 K
+2 | criterion           | Criterion | 0
+--------------------------------------------------
+2.6 M     Trainable params
+0         Non-trainable params
+2.6 M     Total params
+10.460    Total estimated model params size (MB)
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 19 worker processes in total. Our suggested max number of worker in current system is 16, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Sanity Checking DataLoader 0:   0%|                                                                                                                                                                   | 0/2 [00:00<?, ?it/s]predicted_trajectory torch.Size([32, 6, 60, 5])
+Sanity Checking DataLoader 0:  50%|█████████████████████████████████████████████████████████████████████████████▌                                                                             | 1/2 [00:02<00:02,  0.34it/s]
+Sanity Checking DataLoader 0:  50%|█████████████████████████████████████████████████████████████████████████████▌                                                                             | 1/2 [00:02<00:02,  0.34it/s]predicted_trajectory torch.Size([32, 6, 60, 5])
+Epoch 0:   0%|                                                                                                                                                                                     | 0/1558 [00:00<?, ?it/s]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:441: It is recommended to use `self.log('train/loss', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+Epoch 0:   0%|                                                                                                                                                                                     | 0/1558 [00:00<?, ?it/s]predicted_trajectory torch.Size([16, 6, 60, 5])
+Epoch 0:   0%|                                                                                                                                                                 | 1/1558 [00:01<46:19,  0.56it/s, v_num=obbv]predicted_trajectory torch.Size([16, 6, 60, 5])
+Epoch 0:   0%|▏                                                                                                                                                                | 2/1558 [00:03<43:30,  0.60it/s, v_num=obbv]predicted_trajectory torch.Size([16, 6, 60, 5])
+Epoch 0:   0%|▎                                                                                                                                                                | 3/1558 [00:05<51:38,  0.50it/s, v_num=obbv]predicted_trajectory torch.Size([16, 6, 60, 5])
+Epoch 0:   0%|▍                                                                                                                                                                | 4/1558 [00:07<47:45,  0.54it/s, v_num=obbv]predicted_trajectory torch.Size([16, 6, 60, 5])
+Epoch 0:   0%|▌                                                                                                                                                                | 5/1558 [00:08<46:22,  0.56it/s, v_num=obbv]predicted_trajectory torch.Size([16, 6, 60, 5])
+Epoch 0:   0%|▌                                                                                                                                                                | 6/1558 [00:10<47:19,  0.55it/s, v_num=obbv]predicted_trajectory torch.Size([16, 6, 60, 5])
+Epoch 0:   0%|▋                                                                                                                                                                | 7/1558 [00:11<43:48,  0.59it/s, v_num=obbv]predicted_trajectory torch.Size([16, 6, 60, 5])
+Epoch 0:   1%|▊                                                                                                                                                                | 8/1558 [00:13<44:36,  0.58it/s, v_num=obbv]predicted_trajectory torch.Size([16, 6, 60, 5])
+Epoch 0:   1%|▉                                                                                                                                                                | 9/1558 [00:15<43:44,  0.59it/s, v_num=obbv]
+Epoch 0:   1%|▉                                                                                                                                                                | 9/1558 [00:15<43:44,  0.59it/s, v_num=obbv]predicted_trajectory torch.Size([16, 6, 60, 5])
+Epoch 0:   1%|█                                                                                                                                                               | 10/1558 [00:16<43:27,  0.59it/s, v_num=obbv]

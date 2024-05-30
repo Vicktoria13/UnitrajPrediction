@@ -1,0 +1,184 @@
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:28: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn("The verbose parameter is deprecated. Please use get_last_lr() "
+  | Name                | Type      | Params
+--------------------------------------------------
+0 | stacked_transformer | STF       | 2.6 M
+1 | subgraph            | LaneNet   | 2.5 K
+2 | criterion           | Criterion | 0
+--------------------------------------------------
+2.6 M     Trainable params
+0         Non-trainable params
+2.6 M     Total params
+10.460    Total estimated model params size (MB)
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 19 worker processes in total. Our suggested max number of worker in current system is 16, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Sanity Checking DataLoader 0:   0%|                                                                                                                                                                   | 0/1 [00:00<?, ?it/s]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/utilities/data.py:77: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 61. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/nn/modules/loss.py:999: UserWarning: Using a target size (torch.Size([61, 60, 2])) that is different to the input size (torch.Size([61, 61, 60, 2])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.huber_loss(input, target, reduction=self.reduction, delta=self.delta)
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:441: It is recommended to use `self.log('train/loss', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+
+Epoch 0:   0%|                                                                                                                                                                                        | 0/1 [00:00<?, ?it/s]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/utilities/data.py:77: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 24. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/nn/modules/loss.py:999: UserWarning: Using a target size (torch.Size([24, 60, 2])) that is different to the input size (torch.Size([24, 24, 60, 2])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+Epoch 0: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  0.71it/s, v_num=q95f]
+
+
+
+
+Epoch 2: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.49it/s, v_num=q95f, train/loss=7.96e+3]
+
+Epoch 3: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.43it/s, v_num=q95f, train/loss=5.05e+3]
+
+Epoch 4: 100%|█████████████████████████████████████████| 1/1 [00:02<00:00,  0.40it/s, v_num=q95f, train/loss=5.44e+3]
+
+Epoch 5: 100%|█████████████████████████████████████████| 1/1 [00:02<00:00,  0.45it/s, v_num=q95f, train/loss=3.66e+3]
+
+
+
+
+
+
+
+Epoch 9: 100%|█████████████████████████████████████████| 1/1 [00:02<00:00,  0.44it/s, v_num=q95f, train/loss=2.29e+3]
+
+Epoch 10: 100%|████████████████████████████████████████| 1/1 [00:02<00:00,  0.50it/s, v_num=q95f, train/loss=2.64e+3]
+
+Epoch 11: 100%|████████████████████████████████████████| 1/1 [00:02<00:00,  0.47it/s, v_num=q95f, train/loss=2.25e+3]
+
+Epoch 12: 100%|████████████████████████████████████████| 1/1 [00:02<00:00,  0.43it/s, v_num=q95f, train/loss=2.16e+3]
+
+
+
+
+
+
+Epoch 15: 100%|████████████████████████████████████████| 1/1 [00:02<00:00,  0.45it/s, v_num=q95f, train/loss=1.97e+3]
+
+Epoch 16: 100%|████████████████████████████████████████| 1/1 [00:02<00:00,  0.39it/s, v_num=q95f, train/loss=1.87e+3]
+
+Epoch 17: 100%|████████████████████████████████████████| 1/1 [00:02<00:00,  0.43it/s, v_num=q95f, train/loss=1.82e+3]
+
+
+
+
+
+Epoch 20: 100%|████████████████████████████████████████| 1/1 [00:02<00:00,  0.41it/s, v_num=q95f, train/loss=1.78e+3]
+
+Epoch 21: 100%|████████████████████████████████████████| 1/1 [00:02<00:00,  0.44it/s, v_num=q95f, train/loss=1.72e+3]
+
+Epoch 22: 100%|█████████████████████████████████████████| 1/1 [00:02<00:00,  0.45it/s, v_num=q95f, train/loss=1.8e+3]
+
+Epoch 23: 100%|████████████████████████████████████████| 1/1 [00:02<00:00,  0.46it/s, v_num=q95f, train/loss=1.75e+3]
+
+Epoch 24: 100%|████████████████████████████████████████| 1/1 [00:01<00:00,  0.52it/s, v_num=q95f, train/loss=1.59e+3]
+
+Epoch 25: 100%|████████████████████████████████████████| 1/1 [00:01<00:00,  0.53it/s, v_num=q95f, train/loss=1.52e+3]
+
+
+
+
+
+
+Epoch 28: 100%|████████████████████████████████████████| 1/1 [00:02<00:00,  0.49it/s, v_num=q95f, train/loss=1.24e+3]
+
+Epoch 29: 100%|████████████████████████████████████████| 1/1 [00:02<00:00,  0.44it/s, v_num=q95f, train/loss=1.08e+3]
+
+
+
+
+
+Epoch 32: 100%|██████████████████████████████████████████| 1/1 [00:02<00:00,  0.46it/s, v_num=q95f, train/loss=716.0]
+
+Epoch 33: 100%|██████████████████████████████████████████| 1/1 [00:02<00:00,  0.46it/s, v_num=q95f, train/loss=556.0]
+
+Epoch 34: 100%|██████████████████████████████████████████| 1/1 [00:01<00:00,  0.51it/s, v_num=q95f, train/loss=529.0]
+
+Epoch 35: 100%|██████████████████████████████████████████| 1/1 [00:02<00:00,  0.43it/s, v_num=q95f, train/loss=519.0]
+
+
+
+
+
+
+
+Epoch 39: 100%|██████████████████████████████████████████| 1/1 [00:02<00:00,  0.41it/s, v_num=q95f, train/loss=766.0]
+
+Epoch 40: 100%|██████████████████████████████████████████| 1/1 [00:02<00:00,  0.44it/s, v_num=q95f, train/loss=504.0]
+
+Epoch 41: 100%|██████████████████████████████████████████| 1/1 [00:02<00:00,  0.44it/s, v_num=q95f, train/loss=477.0]
+
+Epoch 42: 100%|██████████████████████████████████████████| 1/1 [00:02<00:00,  0.46it/s, v_num=q95f, train/loss=323.0]
+
+Epoch 43: 100%|██████████████████████████████████████████| 1/1 [00:02<00:00,  0.49it/s, v_num=q95f, train/loss=493.0]
+
+
+
+Epoch 45: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.42it/s, v_num=q95f, train/loss=434.0]
+
+Epoch 46: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  0.51it/s, v_num=q95f, train/loss=227.0]
+
+Epoch 47: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.50it/s, v_num=q95f, train/loss=136.0]
+
+Epoch 48: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.46it/s, v_num=q95f, train/loss=301.0]
+
+
+
+
+
+Epoch 51: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.46it/s, v_num=q95f, train/loss=-12.9]
+
+Epoch 52: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.43it/s, v_num=q95f, train/loss=62.10]
+
+Epoch 53: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.42it/s, v_num=q95f, train/loss=156.0]
+
+Epoch 54: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.44it/s, v_num=q95f, train/loss=101.0]
+
+
+
+
+
+Epoch 57: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.47it/s, v_num=q95f, train/loss=421.0]
+
+Epoch 58: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.43it/s, v_num=q95f, train/loss=-13.6]
+
+Epoch 59: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.43it/s, v_num=q95f, train/loss=-242.]
+
+Epoch 60: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.44it/s, v_num=q95f, train/loss=72.50]
+
+
+
+
+Epoch 62: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.44it/s, v_num=q95f, train/loss=-180.]
+
+Epoch 63: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  0.50it/s, v_num=q95f, train/loss=2.400]
+
+Epoch 64: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.39it/s, v_num=q95f, train/loss=-286.]
+
+
+
+Epoch 66: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.40it/s, v_num=q95f, train/loss=152.0]
+
+Epoch 67: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.44it/s, v_num=q95f, train/loss=-183.]
+
+Epoch 68: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.47it/s, v_num=q95f, train/loss=-199.]
+
+
+
+
+
+
+Epoch 71: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  0.51it/s, v_num=q95f, train/loss=-276.]
+
+Epoch 72: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  0.47it/s, v_num=q95f, train/loss=-219.]
+Validation DataLoader 0:   0%|                                                                                                                                                                        | 0/1 [00:00<?, ?it/s]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py:54: Detected KeyboardInterrupt, attempting graceful shutdown...
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fac39a3e680>
+Traceback (most recent call last):
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1479, in __del__
+    self._shutdown_workers()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1437, in _shutdown_workers
+    if self._persistent_workers or self._workers_status[worker_id]:
+
+AttributeError: '_MultiProcessingDataLoaderIter' object has no attribute '_workers_status'

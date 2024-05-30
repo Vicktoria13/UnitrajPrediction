@@ -1,0 +1,68 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.12
+    cli_version: 0.17.0
+    framework: lightning
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1716655696
+    t:
+      1:
+      - 1
+      - 9
+      - 50
+      - 51
+      - 55
+      - 103
+      2:
+      - 1
+      - 9
+      - 50
+      - 51
+      - 55
+      - 103
+      3:
+      - 7
+      - 13
+      - 23
+      - 66
+      4: 3.10.12
+      5: 0.17.0
+      8:
+      - 5
+      13: linux-x86_64
+    m:
+    - 1: trainer/global_step
+      6:
+      - 3
+    - 1: example._type
+      5: 1
+      6:
+      - 1
+    - 1: example.sha256
+      5: 1
+      6:
+      - 1
+    - 1: example.size
+      5: 1
+      6:
+      - 1
+    - 1: example.path
+      5: 1
+      6:
+      - 1
+    - 1: example.format
+      5: 1
+      6:
+      - 1
+    - 1: example.width
+      5: 1
+      6:
+      - 1
+    - 1: example.height
+      5: 1
+      6:
+      - 1

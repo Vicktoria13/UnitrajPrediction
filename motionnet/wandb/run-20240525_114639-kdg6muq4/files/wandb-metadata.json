@@ -1,0 +1,130 @@
+{
+    "os": "Linux-6.5.0-1023-oem-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-05-25T09:46:40.677425",
+    "startedAt": "2024-05-25T09:46:39.796732",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "method=mmTransformer"
+    ],
+    "state": "running",
+    "program": "/home/sdi-2023-01/unitraj_2024_ferrari_du_19/motionnet/train2.py",
+    "codePathLocal": "train2.py",
+    "codePath": "motionnet/train2.py",
+    "git": {
+        "remote": "https://github.com/vita-student-projects/unitraj_2024_ferrari_du_19.git",
+        "commit": "b40376fe509ab29005f2d89cb1f0e3681ad9f7fd"
+    },
+    "email": "Victoria-nguyen@orange.fr",
+    "root": "/home/sdi-2023-01/unitraj_2024_ferrari_du_19",
+    "host": "sdi-2023-01",
+    "username": "sdi-2023-01",
+    "executable": "/home/sdi-2023-01/venv/bin/python3",
+    "cpu_count": 12,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 1502.1776250000003,
+        "min": 400.0,
+        "max": 4200.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1263.549,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 1268.976,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 620.971,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 399.908,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2606.948,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 1877.322,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 1630.611,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 1776.389,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 1845.168,
+            "min": 400.0,
+            "max": 3600.0
+        },
+        {
+            "current": 1469.004,
+            "min": 400.0,
+            "max": 3600.0
+        },
+        {
+            "current": 1442.773,
+            "min": 400.0,
+            "max": 3600.0
+        },
+        {
+            "current": 560.128,
+            "min": 400.0,
+            "max": 3600.0
+        },
+        {
+            "current": 683.393,
+            "min": 400.0,
+            "max": 3600.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 3600.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 3600.0
+        },
+        {
+            "current": 909.741,
+            "min": 400.0,
+            "max": 3600.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 467.8895797729492,
+            "used": 219.01702117919922
+        }
+    },
+    "gpu": "NVIDIA RTX A500 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA RTX A500 Laptop GPU",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 15.301372528076172
+    }
+}

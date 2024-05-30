@@ -1,0 +1,73 @@
+
+Sanity Checking DataLoader 0:   0%|                                                                                                                   | 0/2 [00:00<?, ?it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:28: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn("The verbose parameter is deprecated. Please use get_last_lr() "
+  | Name                | Type      | Params
+--------------------------------------------------
+0 | stacked_transformer | STF       | 2.6 M
+1 | subgraph            | LaneNet   | 2.5 K
+2 | criterion           | Criterion | 0
+--------------------------------------------------
+2.6 M     Trainable params
+0         Non-trainable params
+2.6 M     Total params
+10.460    Total estimated model params size (MB)
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 19 worker processes in total. Our suggested max number of worker in current system is 16, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Get loss: torch.Size([32, 60, 2]) torch.Size([32, 60, 1]) torch.Size([32])
+Sanity Checking DataLoader 0:  50%|█████████████████████████████████████████████████████▌                                                     | 1/2 [00:01<00:01,  0.57it/s]
+Get loss: torch.Size([32, 60, 2]) torch.Size([32, 60, 1]) torch.Size([32])
+Epoch 0:   0%|                                                                                                                                     | 0/1558 [00:00<?, ?it/s]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/utilities/data.py:77: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 32. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:441: It is recommended to use `self.log('train/loss', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   0%|                                                                                                                 | 1/1558 [00:00<23:01,  1.13it/s, v_num=kgbw]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/utilities/data.py:77: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 16. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   0%|▏                                                                                                                | 2/1558 [00:02<35:12,  0.74it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   0%|▏                                                                                                                | 3/1558 [00:04<35:30,  0.73it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   0%|▎                                                                                                                | 4/1558 [00:05<34:11,  0.76it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   0%|▎                                                                                                                | 5/1558 [00:06<33:22,  0.78it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   0%|▍                                                                                                                | 6/1558 [00:07<34:04,  0.76it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   0%|▌                                                                                                                | 7/1558 [00:09<35:33,  0.73it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|▌                                                                                                                | 8/1558 [00:10<34:19,  0.75it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|▋                                                                                                                | 9/1558 [00:11<32:49,  0.79it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|▋                                                                                                               | 10/1558 [00:12<31:19,  0.82it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|▊                                                                                                               | 11/1558 [00:13<30:58,  0.83it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|▊                                                                                                               | 12/1558 [00:13<29:37,  0.87it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|▉                                                                                                               | 13/1558 [00:15<30:07,  0.85it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█                                                                                                               | 14/1558 [00:16<31:10,  0.83it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█                                                                                                               | 15/1558 [00:18<31:18,  0.82it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▏                                                                                                              | 16/1558 [00:18<29:55,  0.86it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▏                                                                                                              | 17/1558 [00:19<29:09,  0.88it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▎                                                                                                              | 18/1558 [00:20<29:12,  0.88it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▎                                                                                                              | 19/1558 [00:21<29:08,  0.88it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▍                                                                                                              | 20/1558 [00:22<29:03,  0.88it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▌                                                                                                              | 21/1558 [00:23<28:53,  0.89it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▌                                                                                                              | 22/1558 [00:24<28:14,  0.91it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▋                                                                                                              | 23/1558 [00:25<28:02,  0.91it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|█▋                                                                                                              | 24/1558 [00:26<27:56,  0.91it/s, v_num=kgbw]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])

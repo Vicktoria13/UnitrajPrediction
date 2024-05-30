@@ -1,0 +1,1 @@
+{"example": {"_type": "image-file", "sha256": "e9d0dcada1dedfb1c0616e73e8ce688bfb56b7b82d1fe669837298ea0ef08b81", "size": 9105, "path": "media/images/example_45_e9d0dcada1dedfb1c061.png", "format": "png", "width": 640, "height": 480}, "_timestamp": 1716628895.861292, "_runtime": 50.19044899940491, "_step": 45, "_wandb": {"runtime": 50}}

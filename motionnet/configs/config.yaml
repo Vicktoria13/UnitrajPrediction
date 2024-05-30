@@ -1,0 +1,50 @@
+# exp setting
+exp_name: 'full'
+ckpt_path: null
+#ckpt_path: '/home/perret/gitVic/motionnet/83bhewik/checkpoints/epoch=35-val/minADE6=1.77.ckpt'
+#ckpt_path: '/home/sdi-2023-01/Téléchargements/minADE6=1.14.ckpt'
+seed: 42
+debug: False
+devices: [0]
+
+# data related
+load_num_workers: 19
+
+#train_data_path: ["/home/perret/gitVic/unitraj_2024_ferrari_du_19/motionnet/data_samples/nuscenes"]
+#val_data_path: ["/home/perret/gitVic/unitraj_2024_ferrari_du_19/motionnet/data_samples/nuscenes"]
+
+
+train_data_path: ["data_samples/nuscenes"]
+val_data_path: ["data_samples/nuscenes"]
+
+
+#train_data_path: ["/home/vlnguyen/dlav_data/train"]
+#train_data_path: ["/home/sdi-2023-01/Téléchargements/dlav_data/dlav_data/train"]
+#val_data_path: ["/home/vlnguyen/dlav_data/val"]
+#val_data_path: ["/home/sdi-2023-01/Téléchargements/dlav_data/dlav_data/val"]
+#val_data_path: ["/home/vlnguyen/dlav_data/test_medium"]
+
+#train_data_path: ["/home/perret/datasets_train"]
+#val_data_path: ["/home/perret/datasets_val"]
+#val_data_path: ["/home/perret/val_hard"]
+
+max_data_num: [30000] #[10000000]
+past_len: 19 #21 # 0.1s
+future_len: 30 #60 # 0.1s
+object_type: ['VEHICLE']#, 'PEDESTRIAN', 'CYCLIST']
+line_type: ['lane','stop_sign','road_edge','road_line','crosswalk','speed_bump'] #['lane','stop_sign','road_edge','road_line','crosswalk','speed_bump']
+masked_attributes: ['z_axis, size'] # 'z_axis, size, velocity, acceleration, heading'
+trajectory_sample_interval: 1 # 0.1s
+only_train_on_ego: False
+center_offset_of_map: [30.0, 0.0]
+use_cache: False
+overwrite_cache: False
+store_data_in_memory: False
+
+# official evaluation
+nuscenes_dataroot: '/mnt/nas3_rcp_enac_u0900_vita_scratch/datasets/Prediction-Dataset/nuscenes/nuscenes_root'
+eval_nuscenes: False
+eval_waymo: False
+
+defaults:
+  - method: ptr

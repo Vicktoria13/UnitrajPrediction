@@ -1,0 +1,227 @@
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:28: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn("The verbose parameter is deprecated. Please use get_last_lr() "
+  | Name                | Type      | Params
+--------------------------------------------------
+0 | stacked_transformer | STF       | 2.6 M
+1 | subgraph            | LaneNet   | 2.5 K
+2 | criterion           | Criterion | 0
+--------------------------------------------------
+2.6 M     Trainable params
+0         Non-trainable params
+2.6 M     Total params
+10.460    Total estimated model params size (MB)
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 19 worker processes in total. Our suggested max number of worker in current system is 16, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Sanity Checking DataLoader 0:   0%|                                                                                                                   | 0/2 [00:00<?, ?it/s]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/utilities/data.py:77: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 32. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:441: It is recommended to use `self.log('train/loss', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+Get loss: torch.Size([32, 60, 2]) torch.Size([32, 60, 1]) torch.Size([32])
+Sanity Checking DataLoader 0:  50%|█████████████████████████████████████████████████████▌                                                     | 1/2 [00:01<00:01,  0.53it/s]
+Get loss: torch.Size([32, 60, 2]) torch.Size([32, 60, 1]) torch.Size([32])
+Epoch 0:   0%|                                                                                                                                     | 0/1558 [00:00<?, ?it/s]
+/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/utilities/data.py:77: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 16. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   0%|                                                                                                                 | 1/1558 [00:00<22:12,  1.17it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   0%|▏                                                                                                                | 2/1558 [00:02<31:46,  0.82it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   0%|▏                                                                                                                | 3/1558 [00:03<31:15,  0.83it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   0%|▎                                                                                                                | 4/1558 [00:04<31:12,  0.83it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   0%|▎                                                                                                                | 5/1558 [00:06<31:33,  0.82it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   0%|▍                                                                                                                | 6/1558 [00:07<31:50,  0.81it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   0%|▌                                                                                                                | 7/1558 [00:09<33:32,  0.77it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|▌                                                                                                                | 8/1558 [00:10<32:22,  0.80it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|▋                                                                                                                | 9/1558 [00:10<31:01,  0.83it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|▋                                                                                                               | 10/1558 [00:11<29:52,  0.86it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|▊                                                                                                               | 11/1558 [00:12<29:18,  0.88it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|▊                                                                                                               | 12/1558 [00:13<28:20,  0.91it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|▉                                                                                                               | 13/1558 [00:14<28:24,  0.91it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█                                                                                                               | 14/1558 [00:15<29:15,  0.88it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█                                                                                                               | 15/1558 [00:17<29:32,  0.87it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▏                                                                                                              | 16/1558 [00:17<28:15,  0.91it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▏                                                                                                              | 17/1558 [00:18<27:16,  0.94it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▎                                                                                                              | 18/1558 [00:19<27:42,  0.93it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▎                                                                                                              | 19/1558 [00:20<27:33,  0.93it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▍                                                                                                              | 20/1558 [00:21<27:24,  0.94it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▌                                                                                                              | 21/1558 [00:22<27:10,  0.94it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▌                                                                                                              | 22/1558 [00:22<26:45,  0.96it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   1%|█▋                                                                                                              | 23/1558 [00:23<26:29,  0.97it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|█▋                                                                                                              | 24/1558 [00:24<26:17,  0.97it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|█▊                                                                                                              | 25/1558 [00:25<26:25,  0.97it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|█▊                                                                                                              | 26/1558 [00:27<26:37,  0.96it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|█▉                                                                                                              | 27/1558 [00:28<26:30,  0.96it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|██                                                                                                              | 28/1558 [00:29<26:27,  0.96it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|██                                                                                                              | 29/1558 [00:30<26:54,  0.95it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|██▏                                                                                                             | 30/1558 [00:31<26:45,  0.95it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|██▏                                                                                                             | 31/1558 [00:33<27:09,  0.94it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|██▎                                                                                                             | 32/1558 [00:34<27:18,  0.93it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|██▎                                                                                                             | 33/1558 [00:35<27:26,  0.93it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|██▍                                                                                                             | 34/1558 [00:36<27:33,  0.92it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|██▌                                                                                                             | 35/1558 [00:37<27:09,  0.93it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|██▌                                                                                                             | 36/1558 [00:37<26:43,  0.95it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|██▋                                                                                                             | 37/1558 [00:38<26:24,  0.96it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   2%|██▋                                                                                                             | 38/1558 [00:39<26:24,  0.96it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   3%|██▊                                                                                                             | 39/1558 [00:41<26:41,  0.95it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   3%|██▉                                                                                                             | 40/1558 [00:42<26:42,  0.95it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   3%|██▉                                                                                                             | 41/1558 [00:43<26:44,  0.95it/s, v_num=whi0]
+Exception ignored in: <function Image.__del__ at 0x7958985a2f80>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/tkinter/__init__.py", line 4053, in __del__
+    def __del__(self):
+KeyboardInterrupt:
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   3%|███                                                                                                             | 42/1558 [00:44<27:00,  0.94it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   3%|███                                                                                                             | 43/1558 [00:45<26:50,  0.94it/s, v_num=whi0]
+Get loss: torch.Size([16, 60, 2]) torch.Size([16, 60, 1]) torch.Size([16])
+Epoch 0:   3%|███▏                                                                                                            | 44/1558 [00:46<26:25,  0.96it/s, v_num=whi0]
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7958ae74e680>
+Traceback (most recent call last):
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1479, in __del__
+    self._shutdown_workers()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1443, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/usr/lib/python3.10/multiprocessing/popen_fork.py", line 40, in wait
+    if not wait([self.sentinel], timeout):
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/usr/lib/python3.10/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt:
+Error executing job with overrides: ['method=mmTransformer']
+Traceback (most recent call last):
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1133, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/usr/lib/python3.10/multiprocessing/queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/multiprocessing/reductions.py", line 495, in rebuild_storage_fd
+    fd = df.detach()
+  File "/usr/lib/python3.10/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+  File "/usr/lib/python3.10/multiprocessing/resource_sharer.py", line 86, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 502, in Client
+    c = SocketClient(address)
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 630, in SocketClient
+    s.connect(address)
+FileNotFoundError: [Errno 2] No such file or directory
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 43, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 580, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 987, in _run
+    results = self._run_stage()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1033, in _run_stage
+    self.fit_loop.run()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 205, in run
+    self.advance()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 363, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 140, in run
+    self.advance(data_fetcher)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 212, in advance
+    batch, _, __ = next(data_fetcher)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/loops/fetchers.py", line 133, in __next__
+    batch = super().__next__()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/loops/fetchers.py", line 60, in __next__
+    batch = next(self.iterator)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/utilities/combined_loader.py", line 341, in __next__
+    out = next(self._iterator)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/utilities/combined_loader.py", line 78, in __next__
+    out[i] = next(self.iterators[i])
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1329, in _next_data
+    idx, data = self._get_data()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1295, in _get_data
+    success, data = self._try_get_data()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1146, in _try_get_data
+    raise RuntimeError(f'DataLoader worker (pid(s) {pids_str}) exited unexpectedly') from e
+RuntimeError: DataLoader worker (pid(s) 15864) exited unexpectedly
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/home/sdi-2023-01/unitraj_2024_ferrari_du_19/motionnet/train2.py", line 733, in train
+    trainer.fit(model=model, train_dataloaders=train_loader, val_dataloaders=val_loader,ckpt_path=cfg.ckpt_path)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 544, in fit
+    call._call_and_handle_interrupt(
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 68, in _call_and_handle_interrupt
+    trainer._teardown()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1014, in _teardown
+    loop.teardown()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 413, in teardown
+    self.epoch_loop.teardown()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 315, in teardown
+    self.val_loop.teardown()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 282, in teardown
+    self._results.cpu()
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 527, in cpu
+    return self.to(device="cpu")
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 522, in to
+    self.update(apply_to_collection(dict(self), (Tensor, Metric), move_data_to_device, *args, **kwargs))
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/lightning_utilities/core/apply_func.py", line 70, in apply_to_collection
+    return {k: function(v, *args, **kwargs) for k, v in data.items()}
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/lightning_utilities/core/apply_func.py", line 70, in <dictcomp>
+    return {k: function(v, *args, **kwargs) for k, v in data.items()}
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/lightning_fabric/utilities/apply_func.py", line 103, in move_data_to_device
+    return apply_to_collection(batch, dtype=_TransferableDataType, function=batch_to)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/lightning_utilities/core/apply_func.py", line 64, in apply_to_collection
+    return function(data, *args, **kwargs)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/lightning_fabric/utilities/apply_func.py", line 97, in batch_to
+    data_output = data.to(device, **kwargs)
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 311, in to
+    self.__dict__.update(apply_to_collection(d, (Tensor, Metric), move_data_to_device, *args, **kwargs))
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/lightning_utilities/core/apply_func.py", line 72, in apply_to_collection
+    return _apply_to_collection_slow(
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/lightning_utilities/core/apply_func.py", line 104, in _apply_to_collection_slow
+    v = _apply_to_collection_slow(
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/lightning_utilities/core/apply_func.py", line 122, in _apply_to_collection_slow
+    if is_namedtuple_ or is_sequence:
+  File "/home/sdi-2023-01/venv/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 16072) exited unexpectedly with exit code 1. Details are lost due to multiprocessing. Rerunning with num_workers=0 may give better error trace.
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
